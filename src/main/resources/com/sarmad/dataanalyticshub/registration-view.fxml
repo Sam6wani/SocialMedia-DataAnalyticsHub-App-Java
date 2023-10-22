@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sarmad.dataanalyticshub.registration.RegistrationController">
+    <VBox alignment="CENTER" prefHeight="427.0" prefWidth="382.0">
+        <Label styleClass="lead" text="Register">
+            <font>
+                <Font name="Segoe UI Bold" size="20.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" fillHeight="false">
+            <Label fx:id="newUsernameLabel" depthTest="ENABLE" text="Username" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <padding>
+                    <Insets right="20.0" />
+                </padding>
+            <font>
+               <Font name="Segoe UI" size="13.0" />
+            </font>
+            </Label>
+            <TextField fx:id="newUsername" promptText="Username">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </TextField>
+            <effect>
+                <Blend />
+            </effect>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" centerShape="false">
+            <Label fx:id="newPasswordLabel" alignment="CENTER_RIGHT" text="Password" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <padding>
+                    <Insets right="20.0" />
+                </padding>
+            <font>
+               <Font name="Segoe UI" size="13.0" />
+            </font>
+            </Label>
+            <PasswordField fx:id="newPassword" promptText="Password">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </PasswordField>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" centerShape="false">
+            <Label fx:id="newFNameLabel" alignment="CENTER_RIGHT" text="First name" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <padding>
+                    <Insets right="20.0" />
+                </padding>
+            <font>
+               <Font name="Segoe UI" size="13.0" />
+            </font>
+            </Label>
+            <TextField fx:id="newFName" promptText="First name">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </TextField>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" centerShape="false">
+            <Label fx:id="newLNameLabel" alignment="CENTER_RIGHT" text="Last name" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <padding>
+                    <Insets right="20.0" />
+                </padding>
+            <font>
+               <Font name="Segoe UI" size="13.0" />
+            </font>
+            </Label>
+            <TextField fx:id="newLName" promptText="Last name">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </TextField>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <StackPane alignment="CENTER_RIGHT">
+            <children>
+
+                <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" onAction="#onRegisterButtonClick" text="Register" textAlignment="CENTER">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <effect>
+                        <Blend />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-success" />
+                    </styleClass>
+                </Button>
+            </children>
+            <padding>
+                <Insets right="80.0" />
+            </padding>
+        </StackPane>
+    </VBox>
+</AnchorPane>

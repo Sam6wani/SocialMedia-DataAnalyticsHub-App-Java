@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sarmad.dataanalyticshub.dashboard.DashboardController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <StackPane alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="600.0">
+                    <children>
+                        <ImageView fitHeight="57.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="366.0" textAlignment="CENTER" StackPane.alignment="CENTER">
+                            <font>
+                                <Font name="Segoe UI Bold Italic" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="logoutLabel" contentDisplay="RIGHT" mnemonicParsing="true" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#logoutButton" prefHeight="30.0" prefWidth="48.0" text="Logout" textAlignment="CENTER" StackPane.alignment="CENTER_RIGHT">
+                            <font>
+                                <Font name="Segoe UI" size="12.0" />
+                            </font>
+                     <StackPane.margin>
+                        <Insets right="20.0" />
+                     </StackPane.margin>
+                     <styleClass>
+                        <String fx:value="lbl" />
+                        <String fx:value="lbl-danger" />
+                     </styleClass>
+                        </Label>
+                    </children>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </StackPane>
+                <Separator prefWidth="200.0" />
+                <HBox alignment="CENTER">
+                    <children>
+                        <StackPane HBox.hgrow="ALWAYS">
+                            <children>
+                                <Button fx:id="updateProfileButton" mnemonicParsing="false" onAction="#updateProfileClicked" text="Update Profile">
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="btn-primary" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </StackPane>
+                        <StackPane HBox.hgrow="ALWAYS">
+                            <children>
+                                <Button fx:id="newPostButton" mnemonicParsing="false" onAction="#newPostButton" text="New Post">
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="btn-warning" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </StackPane>
+                        <StackPane HBox.hgrow="ALWAYS">
+                            <children>
+                                <Button fx:id="analysisButton" mnemonicParsing="false" onAction="#analysisButton" text="Analyze my data">
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="btn-info" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </StackPane>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <HBox prefHeight="438.0" prefWidth="800.0">
+                    <children>
+                        <Accordion prefHeight="243.0" prefWidth="238.0">
+                            <panes>
+                                <TitledPane fx:id="searchByIdContainer" animated="false" text="Search by ID">
+                                    <content>
+                                        <AnchorPane nodeOrientation="LEFT_TO_RIGHT">
+                                            <HBox>
+                                                <children>
+                                                    <Label text="Post ID">
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                                    </Label>
+                                                    <TextField fx:id="searchByIdText" prefHeight="25.0" prefWidth="67.0" promptText="Post ID:">
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                                    </TextField>
+                                                </children>
+                                                <padding>
+                                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                </padding>
+                                            </HBox>
+                                            <Button fx:id="searchPostByIdButton" layoutX="70.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchPostById" prefHeight="25.0" prefWidth="56.0" text="Search" />
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="searchTopPostsContainer" animated="false" text="Search top Posts">
+                                    <content>
+                                        <AnchorPane nodeOrientation="LEFT_TO_RIGHT">
+                                            <VBox alignment="CENTER">
+                                                <children>
+                                                    <HBox>
+                                                        <children>
+                                                            <Label text="Top post by">
+                                                                <padding>
+                                                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                </padding>
+                                                            </Label>
+                                                            <TextField fx:id="searchTopPostsText" prefHeight="25.0" prefWidth="67.0" promptText="Top post by">
+                                                                <padding>
+                                                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                </padding>
+                                                            </TextField>
+                                                        </children>
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                                    </HBox>
+                                                    <fx:define>
+                                                        <ToggleGroup fx:id="searchByColGroup" />
+                                                    </fx:define>
+                                                    <RadioButton fx:id="searchByLikesCol" alignment="CENTER_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Likes" textAlignment="CENTER" toggleGroup="$searchByColGroup" userData="likes">
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                          <toggleGroup>
+                                             <ToggleGroup fx:id="searchByColGroup" />
+                                          </toggleGroup>
+                                                    </RadioButton>
+                                                    <RadioButton fx:id="searchBySharesCol" mnemonicParsing="false" prefHeight="18.0" prefWidth="134.0" text="Shares" toggleGroup="$searchByColGroup" userData="shares">
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                                        <toggleGroup>
+                                                            <fx:reference source="searchByColGroup" />
+                                                        </toggleGroup>
+                                                    </RadioButton>
+                                                    <Button fx:id="searchTopPostButton" mnemonicParsing="false" onAction="#searchTopPosts" prefHeight="25.0" prefWidth="56.0" text="Search" />
+                                                </children>
+                                            </VBox>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="deletePostContainer" animated="false" text="Delete Post">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <HBox>
+                                                <children>
+                                                    <Label text="Post ID">
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                                    </Label>
+                                                    <TextField fx:id="deleteByIdText" prefHeight="25.0" prefWidth="67.0" promptText="Post ID:">
+                                                        <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                        </padding>
+                                                    </TextField>
+                                                </children>
+                                                <padding>
+                                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                </padding>
+                                            </HBox>
+                                            <Button fx:id="deletePostByIdButton" layoutX="70.0" layoutY="70.0" mnemonicParsing="false" onAction="#deletePostById" prefHeight="25.0" prefWidth="56.0" text="Delete" />
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TableView fx:id="postTableView" prefHeight="294.0" prefWidth="554.0">
+                            <columns>
+                                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                                <TableColumn fx:id="contentColumn" prefWidth="75.0" text="Content" />
+                                <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
+                                <TableColumn fx:id="likesColumn" prefWidth="75.0" text="Likes" />
+                                <TableColumn fx:id="sharesColumn" prefWidth="75.0" text="Shares" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

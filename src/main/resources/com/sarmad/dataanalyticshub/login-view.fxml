@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Blend?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sarmad.dataanalyticshub.login.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" prefHeight="427.0" prefWidth="382.0">
+        <Label styleClass="lead" text="Login">
+            <font>
+                <Font name="Segoe UI" size="20.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" fillHeight="false">
+            <Label fx:id="usernameLabel" depthTest="ENABLE" text="Username" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <padding>
+                    <Insets right="20.0" />
+                </padding>
+                <font>
+                    <Font name="Segoe UI" size="13.0" />
+                </font>
+            </Label>
+            <TextField fx:id="username" promptText="Username">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </TextField>
+            <effect>
+                <Blend />
+            </effect>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" centerShape="false">
+            <Label fx:id="passwordLabel" text="Password" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <padding>
+                    <Insets right="20.0" />
+                </padding>
+                <font>
+                    <Font name="Segoe UI" size="13.0" />
+                </font>
+            </Label>
+            <PasswordField fx:id="password" promptText="Password">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </PasswordField>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <StackPane alignment="CENTER_RIGHT">
+            <children>
+
+                <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" onAction="#onLoginButtonClick" text="Login" textAlignment="CENTER">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <effect>
+                        <Blend />
+                    </effect>
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                    </styleClass>
+                </Button>
+            </children>
+            <padding>
+                <Insets right="80.0" />
+            </padding>
+        </StackPane>
+        <StackPane>
+            <Label fx:id="accCreationLabel" alignment="CENTER_RIGHT" onMouseClicked="#loadRegistrationForm" text="To create account, click here" textAlignment="CENTER" textFill="#0a5bb1" HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+                <font>
+                    <Font name="Segoe UI" size="13.0" />
+                </font>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <padding>
+                    <Insets right="10.0" top="20.0" />
+                </padding>
+            </Label>
+        </StackPane>
+    </VBox>
+
+</AnchorPane>
