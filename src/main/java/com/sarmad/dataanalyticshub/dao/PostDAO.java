@@ -1,10 +1,13 @@
 package com.sarmad.dataanalyticshub.dao;
 
 import com.sarmad.dataanalyticshub.models.Post;
+import javafx.scene.control.Alert;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.sarmad.dataanalyticshub.utils.AlertUtil.showAlert;
 
 public class PostDAO {
 
@@ -25,13 +28,17 @@ public class PostDAO {
 
             System.out.println("Post created persisted the database.");
         } catch (SQLException e) {
-            e.printStackTrace();
+            showAlert(
+                    Alert.AlertType.ERROR,
+                    "Post creation error",
+                    "Unable to create post",
+                    e.getMessage());
             try{
                 if (conn != null) {
                     conn.rollback();
                 }
             } catch (SQLException e2) {
-                e2.printStackTrace();
+//                e2.printStackTrace();
             }
         }
     }

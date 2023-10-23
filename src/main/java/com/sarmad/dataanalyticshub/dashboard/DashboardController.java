@@ -7,7 +7,6 @@ import com.sarmad.dataanalyticshub.dao.UserDAO;
 import com.sarmad.dataanalyticshub.models.Post;
 import com.sarmad.dataanalyticshub.models.User;
 import com.sarmad.dataanalyticshub.pieChart.PieChartController;
-import com.sarmad.dataanalyticshub.utils.AlertUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,12 +26,12 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+import static com.sarmad.dataanalyticshub.utils.AlertUtil.showAlert;
 import static java.lang.Integer.parseInt;
 
 public class DashboardController implements Initializable {
@@ -355,7 +354,7 @@ public class DashboardController implements Initializable {
                 if (updated) {
                     System.out.println("User updated");
                 } else {
-                    AlertUtil.showAlert(
+                    showAlert(
                             Alert.AlertType.ERROR,
                             "Update failed",
                             "OOPS! user profile update failed",
