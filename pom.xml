@@ -82,7 +82,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.sarmad.dataanalyticshub/com.sarmad.dataanalyticshub.HelloApplication
+                            <mainClass>com.sarmad.dataanalyticshub/com.sarmad.dataanalyticshub.DataAnalyticsHubApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
