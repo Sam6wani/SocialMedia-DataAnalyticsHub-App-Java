@@ -7,9 +7,9 @@ The application follows the principles of OOP:
 Encapsulation
 Abstraction
 Inheritance
-Java Database Connectivity
-JavaFX
-MVC Model
+SQLite-JDBC Version 3.42.0.1
+JavaFX Version 17.0.6
+MVC Model and SOLID Principles
 By using OOP concepts, the program becomes more organized, maintainable, and extensible. It separates concerns and allows us to focus on specific functionalities within individual classes.
 
 
@@ -20,6 +20,7 @@ this hasn't been tested on linux based systems
 Stable internet is needed
 JAVA 18 is installed on the tests machine
 MAVEN wrapper is included in the code base
+Intellij IDE 2023.2
 Go to the project directory
 
 cd <PROJECT DIRECTORY>
