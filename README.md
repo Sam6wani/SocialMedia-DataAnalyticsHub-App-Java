@@ -30,6 +30,24 @@ Run the following to prepare a jar
 It will create a target folder under which all the compiled classes and jar exist.
 ![Screenshot 2024-12-10 171218](https://github.com/user-attachments/assets/d104f2ba-79f9-42e3-9161-2901dd8ce11b)
 
+![Screenshot 2024-12-10 171245](https://github.com/user-attachments/assets/67f4eda3-8d7e-4205-9936-f3c5b9d35fa0)
+
+
+![Screenshot 2024-12-10 171259](https://github.com/user-attachments/assets/3d919e74-b638-4ffe-aa21-83ecd2a4edde)
+
+![Screenshot 2024-12-10 171339](https://github.com/user-attachments/assets/abab9dd5-82e3-4981-99fa-4a530b898594)
+
+![Screenshot 2024-12-10 171405](https://github.com/user-attachments/assets/9177ace8-5e82-4916-a8b8-71520b74498d)
+
+
+![Screenshot 2024-12-10 171414](https://github.com/user-attachments/assets/e6e6d28f-e8c0-4fe0-9abd-f0a05545e103)
+
+
+
+![Screenshot 2024-12-10 171426](https://github.com/user-attachments/assets/b9332956-b114-4c0d-9c14-22be38239635)
+
+
+
 
 
 ## Screens
