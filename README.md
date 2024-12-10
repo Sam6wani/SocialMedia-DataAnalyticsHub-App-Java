@@ -28,6 +28,7 @@ I have provided a maven wrapper to clean, compile and package the application in
 Run the following to prepare a jar
  ./mvnw clean compile package
 It will create a target folder under which all the compiled classes and jar exist.
+![Screenshot 2024-12-10 171218](https://github.com/user-attachments/assets/d104f2ba-79f9-42e3-9161-2901dd8ce11b)
 
 
 
@@ -41,6 +42,9 @@ It will create a target folder under which all the compiled classes and jar exis
 ### Dashboard View
 
 #### Pie Chart View
+
+ 
+
 
 ## Third party libraries used
 
